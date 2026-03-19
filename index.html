@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velvet Roast Cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <nav class="nav-bar">
+          <div>
+            <p class="eyebrow">Velvet Roast</p>
+            <h1>Crafted coffee, warm pastries, and candlelit comfort.</h1>
+          </div>
+          <a class="nav-link" href="#menu">Explore menu</a>
+        </nav>
+
+        <div class="hero-content">
+          <section class="hero-copy">
+            <p class="hero-tag">Downtown's prettiest little cafe</p>
+            <p class="hero-text">
+              Start your morning with velvety espresso, flaky croissants, and a
+              room that feels like golden hour all day long.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#reserve">Book a table</a>
+              <button class="button secondary" id="dailySpecialBtn">Reveal today's pour</button>
+            </div>
+            <div class="special-card" id="specialCard" aria-live="polite">
+              <span class="special-label">Barista pick</span>
+              <p id="specialText">Cardamom Rose Latte with orange-zest shortbread.</p>
+            </div>
+          </section>
+
+          <aside class="hero-panel">
+            <p class="panel-title">Why locals linger</p>
+            <div class="panel-grid">
+              <article>
+                <strong>Single-origin beans</strong>
+                <span>Rotated every week for fresh tasting notes.</span>
+              </article>
+              <article>
+                <strong>Fresh bakes</strong>
+                <span>Butter-rich pastries baked before sunrise.</span>
+              </article>
+              <article>
+                <strong>Late-night jazz</strong>
+                <span>Friday candlelight sets until 10 PM.</span>
+              </article>
+              <article>
+                <strong>Sunny courtyard</strong>
+                <span>Pet-friendly patio with climbing jasmine.</span>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </header>
+
+      <main>
+        <section class="section story" id="about">
+          <div>
+            <p class="section-label">Our story</p>
+            <h2>A neighborhood hideaway designed for slow sips and good conversation.</h2>
+          </div>
+          <p>
+            Velvet Roast blends Parisian cafe charm with modern coffee craft,
+            pairing silky espresso drinks, botanical teas, and seasonal plates
+            in a softly lit space layered with velvet booths, marble tables,
+            and fresh flowers.
+          </p>
+        </section>
+
+        <section class="section menu" id="menu">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Signature menu</p>
+              <h2>Beautiful favorites made for every mood.</h2>
+            </div>
+            <p>From delicate pastries to comforting brunch plates, every item is plated with care.</p>
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-card featured">
+              <span>Most loved</span>
+              <h3>Honey Cinnamon Latte</h3>
+              <p>Espresso, steamed oat milk, wildflower honey, and a velvet cinnamon cloud.</p>
+              <strong>$6.50</strong>
+            </article>
+            <article class="menu-card">
+              <h3>Pistachio Croissant</h3>
+              <p>Shatteringly crisp layers filled with pistachio cream and sea salt.</p>
+              <strong>$5.25</strong>
+            </article>
+            <article class="menu-card">
+              <h3>Rose Berry Toast</h3>
+              <p>Whipped ricotta, macerated berries, rose syrup, and crushed almonds.</p>
+              <strong>$9.75</strong>
+            </article>
+            <article class="menu-card">
+              <h3>Garden Brunch Bowl</h3>
+              <p>Herbed quinoa, jammy eggs, avocado, pickled onions, and lemon tahini.</p>
+              <strong>$12.50</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="section experience">
+          <div class="experience-card quote-card">
+            <p class="section-label">Guest favorite</p>
+            <blockquote>
+              “The kind of cafe where you come for one latte and accidentally stay for three dreamy hours.”
+            </blockquote>
+            <span>— House review board</span>
+          </div>
+          <div class="experience-card hours-card">
+            <p class="section-label">Hours</p>
+            <ul>
+              <li><span>Mon–Thu</span><strong>7 AM – 8 PM</strong></li>
+              <li><span>Fri</span><strong>7 AM – 10 PM</strong></li>
+              <li><span>Sat</span><strong>8 AM – 10 PM</strong></li>
+              <li><span>Sun</span><strong>8 AM – 6 PM</strong></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section reserve" id="reserve">
+          <div>
+            <p class="section-label">Reserve a corner table</p>
+            <h2>Plan your next coffee date.</h2>
+            <p>Tell us when you're coming and we'll have the candles glowing.</p>
+          </div>
+
+          <form class="reserve-form" id="reserveForm">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Jamie" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="jamie@example.com" required />
+            </label>
+            <label>
+              Party size
+              <select name="partySize">
+                <option>2 guests</option>
+                <option>3 guests</option>
+                <option>4 guests</option>
+                <option>5+ guests</option>
+              </select>
+            </label>
+            <button class="button primary" type="submit">Reserve now</button>
+            <p class="form-message" id="formMessage" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
